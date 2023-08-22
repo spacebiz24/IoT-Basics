@@ -11,6 +11,6 @@ try:
     T.sleep(2)
     GP.output(LED_PIN, False)
     T.sleep(2)
-except KeyboardInterrupt:
+except KeyBoardInterrupt:
   GP.cleanup()
   exit()
