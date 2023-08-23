@@ -3,7 +3,7 @@ import time
 
 # Pi Setup
 GPIO.setwarnings(0)
-GPIO.setmode(GPIO.BCM) #GPIO.BOARD -> pin no.
+GPIO.setmode(GPIO.BCM) # GPIO.BOARD -> pin no.
 
 # GPIO Setup
 LED_PIN = 18
