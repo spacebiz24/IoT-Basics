@@ -13,6 +13,6 @@ GPIO.setup(LED_PIN, GPIO.OUT)
 # Main
 while True:
     if GPIO.input(LDR_PIN):
-      GPIO.output(LED, 1)
+      GPIO.output(LED_PIN, 1)
     else:
-      GPIO.output(LED, 0)
+      GPIO.output(LED_PIN, 0)
