@@ -17,5 +17,5 @@ try:
     GPIO.output(LED_PIN, False)
     time.sleep(1)
 except KeyBoardInterrupt:
-  GP.cleanup()
+  GPIO.cleanup()
   exit()
