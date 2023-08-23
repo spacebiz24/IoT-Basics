@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 
 # Pi Setup
 GPIO.setwarnings(0)
-GPIO.setmode(GPIO.BCM) # GPIO.BOARD -> pin no.
+GPIO.setmode(GPIO.BCM)
 
 # GPIO Setup
 LDR_PIN = 22
