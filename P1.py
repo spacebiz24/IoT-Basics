@@ -1,16 +1,21 @@
-import RPi.GPIO as GP
-import time as T
+import RPi.GPIO as GPIO
+import time
 
+# Pi Setup
+GPIO.setwarnings(0)
+GPIO.setmode(GPIO.BCM) #GPIO.BOARD -> pin no.
+
+# GPIO Setup
 LED_PIN = 18
+GPIO.setup(LED_PIN, GPIO.OUT)
 
-GP.setmode(GP.BCM)
-GP.setup(LED_PIN, GP.OUT)
+# Main
 try:
   while True:
-    GP.output(LED_PIN, True)
-    T.sleep(2)
-    GP.output(LED_PIN, False)
-    T.sleep(2)
+    GPIO.output(LED_PIN, True)
+    time.sleep(1)
+    GPIO.output(LED_PIN, False)
+    time.sleep(1)
 except KeyBoardInterrupt:
   GP.cleanup()
   exit()
