@@ -3,7 +3,7 @@
   <img src = "../Assets/P2.png" width = 640>
 </p>
 <p align = "center">
-  <em>P2 Circuit Diagram of P2</em>
+  <em>P2 Circuit Diagram</em>
 </p>
 
 ___
@@ -12,5 +12,5 @@ ___
   <img src = "../Assets/P2-A.png" width = 640>
 </p>
 <p align = "center">
-  <em>Circuit Diagram of P2 Assignments</em>
+  <em>P2 Assignments' Circuit Diagram</em>
 </p>
