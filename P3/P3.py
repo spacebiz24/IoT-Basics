@@ -3,19 +3,19 @@ import adafruit_dht
 import time
 
 # Sensor Setup
-dht_pin = board.D21 # GPIO 21
-dht_sensor = adafruit_dht.DHT11(dht_pin)
+DHT11Pin = board.D21 # GPIO 21
+DHT11Sensor = adafruit_dht.DHT11(DHT11Pin)
 
 while True:
   try:
-    temperature = dht_sensor.temperature
-    humidity = dht_sensor.humidity
+    temperatureCelsius = DHT11Sensor.temperature
+    humidityPercent = DHT11Sensor.humidity
 
-    print(f"Temperature: {temperature} C, Humidity: {humidity} %")
+    print(f"Temperature: {temperatureCelsius} C, Humidity: {humidityPercent} %")
     time.sleep(1)
 
   except RuntimeError:
     time.sleep(1)
     continue
   except KeyboardInterrupt:
-    dht_sensor.exit()
+    DHT11Sensor.exit()
