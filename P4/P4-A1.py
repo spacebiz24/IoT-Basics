@@ -2,12 +2,11 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setwarnings(False)
-GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 
+# Pin Setup
 RELAY_PIN_1 = 22
 RELAY_PIN_2 = 27
-
 GPIO.setup(RELAY_PIN_1, GPIO.OUT)
 GPIO.setup(RELAY_PIN_2, GPIO.OUT)
 
