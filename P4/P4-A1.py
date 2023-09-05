@@ -1,3 +1,5 @@
+# Control the direction of motor spin
+
 import RPi.GPIO as GPIO
 import time
 
