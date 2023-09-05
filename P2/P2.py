@@ -1,3 +1,5 @@
+# Interface an LDR to the RPi to turn ON an LED in the presence of light
+
 import RPi.GPIO as GPIO
 
 # Pi Setup
