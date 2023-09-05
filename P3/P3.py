@@ -1,3 +1,5 @@
+# Interface DHT11 sensor with RPi to display temperature and humidity readings
+
 import board
 import adafruit_dht
 import time
