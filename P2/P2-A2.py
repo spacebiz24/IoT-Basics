@@ -1,3 +1,5 @@
+# Switch multiple LEDs with a delay based on LDR readings
+
 import RPi.GPIO as GPIO
 import time
 
