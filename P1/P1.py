@@ -1,3 +1,5 @@
+# Blink an LED at periodic intervals by interfacing with RPi 4
+
 import RPi.GPIO as GPIO
 import time
 
