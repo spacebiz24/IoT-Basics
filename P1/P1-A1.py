@@ -1,3 +1,5 @@
+# Blink a series of LEDs in binary
+
 import RPi.GPIO as GPIO
 import time
 
