@@ -1,3 +1,5 @@
+# Interfacing soil moisture sensor with RPi and control the motor
+
 import RPi.GPIO as GPIO
 import time
 
