@@ -1,3 +1,5 @@
+# Interface Sensor data to Thingspeak through RPi
+
 import http.client
 import urllib
 import time
