@@ -1,3 +1,5 @@
+# Interface Motor Relay with RPi to control its operation
+
 import RPi.GPIO as GPIO
 import time
 
