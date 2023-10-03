@@ -1,45 +1,44 @@
 import bluetooth
-import RPi.GPIO as GP
+import RPi.GPIO as GPIO
 
-led = 4
-GP.setmode(GP.BCM)
-GP.setup(led, GP.OUT)
-host = ""
-port = 1
-server = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-
+ledPin = 4
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(ledPin, GPIO.OUT)
+Host = ""
+Port = 1
+Server = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 print("Bluetooth Socket Created")
 
 try:
-    server.bind((host, port))
+    Server.bind((Host, Port))
     print("Bluetooth Binding Completed")
 except:
     print("Bluetooth Binding Failed")
 
-server.listen(1)
+Server.listen(1)
 
-client, address = server.accept()
-print("Connected To", address)
-print("Client:", client)
+Client, Address = Server.accept()
+print("Connected To", Address)
+print("Client:", Client)
 
 try:
     while True:
-        data = client.recv(1024)
-        data = int(data)
+        Data = Client.recv(1024)
+        Data = int(Data)
         print(data)
         if data == 1:
-            GP.output(led, True)
-            send = "Light ON"
+            GPIO.output(ledPin, True)
+            Message = "Light ON"
             print("ON")
         elif data == 0:
-            GP.output(led, False)
-            send = "Light OFF"
+            GPIO.output(ledPin, False)
+            Message = "Light OFF"
             print("OFF")
         else:
-            send = "Type 1 or 0"
-        client.send(send)
+            Message = "Type 1 or 0"
+        Client.send(Message)
         
 except:
-    GP.cleanup()
-    client.close()
-    server.close()
+    GPIO.cleanup()
+    Client.close()
+    Server.close()
