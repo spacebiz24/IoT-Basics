@@ -20,7 +20,7 @@ ___
 ___
 
 <p align = "center">
-  <img src = "../Assets/P5-Phone.png" width = 640>
+  <img src = "../Assets/P5-Phone.jpeg" width = 640>
 </p>
 <p align = "center">
   <em>Activity on the Phone after Bluetooth Connection</em>
