@@ -1,7 +1,7 @@
 import bluetooth
 import RPi.GPIO as GPIO
 
-ledPin = 4
+ledPin = 18
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin, GPIO.OUT)
 Host = ""
