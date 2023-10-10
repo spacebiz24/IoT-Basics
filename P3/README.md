@@ -7,6 +7,24 @@
 </p>
 
 ___
+
+<p align = "center">
+  <img src = "../Assets/P3-Console.png" width = 320>
+</p>
+<p align = "center">
+  <em>Output on Console</em>
+</p>
+
+___
+
+<p align = "center">
+  <img src = "../Assets/P3-Thingspeak.PNG" width = 640>
+</p>
+<p align = "center">
+  <em>Output on Thingspeak's Website</em>
+</p>
+
+___
 # P3-A
 ## Steps to set up Thingspeak
 1. Create an account and log in.
