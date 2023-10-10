@@ -18,8 +18,8 @@ except:
 Server.listen(1)
 
 Client, Address = Server.accept()
-print("Connected To", Address)
-print("Client:", Client)
+print("Connected To: ", Address)
+print("Client: ", Client)
 
 try:
     while True:
