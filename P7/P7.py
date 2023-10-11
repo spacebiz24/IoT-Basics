@@ -1,5 +1,6 @@
 import time
-import datetime
+from pytz import timezone
+from datetime import datetime
 import csv
 import MySQLdb
 import RPi.GPIO as GPIO
@@ -16,9 +17,9 @@ Database = MySQLdb.connect(host = "localhost", user = "exampleuser", passwd = "p
 Cursor = Database.cursor()
 
 while True:
-    temperatureCelsius = GPIO.input(IR_SENSOR_PIN)
-    currentTime = datetime.datetime.utcnow()
-    print(temperatureCelsius)
-    Cursor.execute('''INSERT INTO SensorStats(Date_Time, IRSensorStat) VALUES(%s, %s);''', (currentTime, temperatureCelsius))
+    Proximity = GPIO.input(IR_SENSOR_PIN)
+    currentTime = datetime.now(timezone("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S.%f")
+    print(Proximity)
+    Cursor.execute('''INSERT INTO SensorStats(Time, Proximity) VALUES(%s, %s);''', (currentTime, Proximity))
     Database.commit()
     time.sleep(1)
