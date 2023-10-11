@@ -28,7 +28,7 @@ ___
 
 ___
 ## Steps to Setup Bluetooth
-1. Download the Pi3 Bluetooth Manager.
+1. Download the [Pi3 Bluetooth Manager](https://github.com/spacebiz24/IoT-Basics/blob/main/Assets/Pi3%20Bluetooth%20Manager.apk).
 1. Open the terminal and type `bluetoothctl`.
 1. Optionally, change the name of the Pi by typing `system-alias 'New Name'`.
 1. Turn on Bluetooth on both the Phone and the Pi.
