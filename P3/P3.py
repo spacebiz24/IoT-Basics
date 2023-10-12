@@ -3,6 +3,11 @@
 import board
 import adafruit_dht
 import time
+import psutil
+
+for proc in psutil.process_iter():
+    if proc.name() == 'libgpiod_pulsein' or proc.name() == 'libgpiod_pulsei':
+        proc.kill()
 
 # Sensor Setup
 DHT11Pin = board.D21 # GPIO 21
