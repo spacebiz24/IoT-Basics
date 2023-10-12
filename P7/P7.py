@@ -6,7 +6,6 @@ import MySQLdb
 import RPi.GPIO as GPIO
 
 GPIO.setwarnings(False)
-GPIO.cleanup()
 
 IR_SENSOR_PIN = 4
 
