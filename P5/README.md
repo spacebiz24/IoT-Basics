@@ -34,5 +34,5 @@ ___
 1. Turn on Bluetooth on both the Phone and the Pi.
 1. Connect with the phone via Bluetooth.
 1. In the terminal, as the phone connects with the Pi, note down the MAC address of the Pi.
-1. Open the app on the phone and connect with the device that matches the MAC address.
 1. Run the Python file and interact with the Pi using Bluetooth.
+1. Open the app on the phone and connect with the device that matches the MAC address.
