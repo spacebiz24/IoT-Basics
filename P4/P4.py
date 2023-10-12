@@ -4,7 +4,6 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setwarnings(False)
-GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 
 RELAY_PIN = 22
