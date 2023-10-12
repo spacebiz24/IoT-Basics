@@ -7,14 +7,14 @@ import board
 import adafruit_dht
 import psutil
 
-key = "6HA8IJ1FEHXSR9A3"
-
 for proc in psutil.process_iter():
     if proc.name() == 'libgpiod_pulsein' or proc.name() == 'libgpiod_pulsei':
         proc.kill()
 
 DHT11Pin = board.D4
 sensor = adafruit_dht.DHT11(DHT11Pin)
+
+key = "6HA8IJ1FEHXSR9A3" # Write API Key
 
 def readTemperature():
     while True:
@@ -24,7 +24,7 @@ def readTemperature():
         except:
             continue
         
-        params = urllib.parse.urlencode({'field1':temp,'field2':humidity,'key':key})
+        params = urllib.parse.urlencode({'field1':temperatureCelsisus,'field2':humidityPercent,'key':key})
         headers = {"Content-typZZe":"application/x-www-form-urlencoded","Accept":"text/plain"}
         conn = http.client.HTTPConnection("api.thingspeak.com:80")
         try:
