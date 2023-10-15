@@ -29,11 +29,11 @@ ___
 1. To start the setup process of MariaDB, run the following command `sudo mysql_secure_installation`.
 1. Set the password and say `Y` to all prompts.
 1. Login to SQL using the command `sudo mysql -u root -p`.
-1. Run the following SQL commands in succession to create a database, and a table and to configure the table.
+1. Run the following SQL commands in succession to create a database, a table and to configure the table.
    ```SQL
    CREATE DATABASE exampledb;
    CREATE USER 'exampleuser'@'localhost' IDENTIFIED BY 'pimylifeup';
-   USE exampledb
+   USE exampledb;
    CREATE TABLE SensorStats(Time VARCHAR(50), Proximity FLOAT);
    GRANT ALL PRIVILEGES ON exampledb.* TO 'exampleuser'@'localhost';
    FLUSH PRIVILEGES;
