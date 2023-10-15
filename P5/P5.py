@@ -1,9 +1,14 @@
 import bluetooth
 import RPi.GPIO as GPIO
 
-ledPin = 18
+# RPi Setup
+GPIO.setwarnings(0)
 GPIO.setmode(GPIO.BCM)
+
+# Pin Setup
+ledPin = 18
 GPIO.setup(ledPin, GPIO.OUT)
+
 Host = ""
 Port = 1
 Server = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
