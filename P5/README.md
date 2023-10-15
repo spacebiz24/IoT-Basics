@@ -36,3 +36,9 @@ ___
 1. In the terminal, as the phone connects with the Pi, note down the MAC address of the Pi.
 1. Run the Python file and interact with the Pi using Bluetooth.
 1. Open the app on the phone and connect with the device that matches the MAC address.
+
+In case some packages are missing
+   ```bash
+   sudo apt-get install python-blutooth
+   sudo apt-get install python-rpi.gpio
+   ```
