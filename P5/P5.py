@@ -28,14 +28,13 @@ print("Client: ", Client)
 
 try:
     while True:
-        Data = Client.recv(1024)
-        Data = int(Data)
+        Data = int(Client.recv(1024))
         print(Data)
-        if Data == 1:
+        if Data:
             GPIO.output(ledPin, True)
             Message = "Light ON"
             print("ON")
-        elif Data == 0:
+        elif !Data:
             GPIO.output(ledPin, False)
             Message = "Light OFF"
             print("OFF")
