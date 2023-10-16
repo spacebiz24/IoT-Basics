@@ -15,10 +15,10 @@ counter = 0
 
 # Main
 try:
-  while True:
-	  for LEDIndex in range(len(LED)):
-		  GPIO.output(LED[LEDIndex], counter&(1<<LEDIndex) != 0)
-	counter += 1
+	while True:
+		for LEDIndex in range(len(LED)):
+			GPIO.output(LED[LEDIndex], counter&(1<<LEDIndex) != 0)
+		counter += 1
 except KeyBoardInterrupt:
-  GPIO.cleanup()
-  exit()
+	GPIO.cleanup()
+	exit()
