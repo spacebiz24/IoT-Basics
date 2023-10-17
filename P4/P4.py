@@ -6,8 +6,8 @@ import time
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-RELAY_PIN = 22
 
+RELAY_PIN = 22
 GPIO.setup(RELAY_PIN, GPIO.OUT)
 
 try:
