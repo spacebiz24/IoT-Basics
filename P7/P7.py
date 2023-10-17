@@ -6,10 +6,9 @@ import MySQLdb
 import RPi.GPIO as GPIO
 
 GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
 
 IR_SENSOR_PIN = 4
-
-GPIO.setmode(GPIO.BCM)
 GPIO.setup(IR_SENSOR_PIN, GPIO.IN)
 
 Database = MySQLdb.connect(host = "localhost", user = "exampleuser", passwd = "pimylifeup", db = "exampledb")
