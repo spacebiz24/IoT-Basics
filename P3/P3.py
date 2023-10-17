@@ -6,7 +6,7 @@ import time
 import psutil
 
 for proc in psutil.process_iter():
-    if proc.name() == 'libgpiod_pulsein' or proc.name() == 'libgpiod_pulsei':
+    if proc.name() in ['libgpiod_pulsei', 'libgpiod_pulsein']:
         proc.kill()
 
 # Sensor Setup
