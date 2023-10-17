@@ -6,7 +6,7 @@ GPIO.setmode(BCM)
 
 LDR_PIN = 22
 GPIO.setup(LDR_PIN,GPIO.IN)
-LED_PIN = [18,21]
+LED = [18,21]
 GPIO.setup(LED,GPIO.OUT)
 
 while True:
