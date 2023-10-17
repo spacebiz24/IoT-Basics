@@ -10,8 +10,7 @@ LED = [18,21]
 GPIO.setup(LED,GPIO.OUT)
 
 while True:
-  LDR_Value = GPIO.input(LDR_PIN)
-  Delay = 1 if LDR_Value else 0.5
+  Delay = 1 if GPIO.input(LDR_PIN) else 0.5
   #switch between LEDs at different speeds based on LDR_Value
   GPIO.output(LED[0],1)
   time.sleep(Delay)
