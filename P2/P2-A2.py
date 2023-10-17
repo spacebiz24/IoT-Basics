@@ -15,8 +15,7 @@ GPIO.setup(LED, GPIO.OUT)
 
 # Main
 while True:
-    LDR_Value = GPIO.input(LDR_PIN)
-    Delay = 1 if LDR_Value else 0.5
+    Delay = 1 if GPIO.input(LDR_PIN) else 0.5
     GPIO.output(LED[0], LDR_Value)
     time.sleep(Delay)
     GPIO.output(LED[1], LDR_Value)
