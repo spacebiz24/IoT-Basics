@@ -14,10 +14,7 @@ GPIO.setup(SOIL_PIN, GPIO.IN)
 
 try:
     while True:
-        if GPIO.input(SOIL_PIN):
-            GPIO.output(RELAY_PIN, True)
-        else:
-            GPIO.output(RELAY_PIN, False)
+            GPIO.output(RELAY_PIN, GPIO.input(SOIL_PIN))
 except KeyboardInterrupt:
     GPIO.cleanup()
     exit()
