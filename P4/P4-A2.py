@@ -7,9 +7,8 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 RELAY_PIN = 22
-SOIL_PIN = 24
-
 GPIO.setup(RELAY_PIN, GPIO.OUT)
+SOIL_PIN = 24
 GPIO.setup(SOIL_PIN, GPIO.IN)
 
 try:
