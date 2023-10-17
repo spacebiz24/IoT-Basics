@@ -14,4 +14,4 @@ GPIO.setup(LED_PIN, GPIO.OUT)
 
 # Main
 while True:
-    GPIO.output(LED_PIN,GPIO.input(LDR_PIN))
+    GPIO.output(LED_PIN, GPIO.input(LDR_PIN))
