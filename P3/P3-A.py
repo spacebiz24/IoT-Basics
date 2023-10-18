@@ -20,6 +20,8 @@ while True:
     try:
         temperatureCelsisus = sensor.temperature
         humidityPercent = sensor.humidity
+        print("Temperarture:{}*C Humidity:{}%".format(temperatureCelsius, humidityPercent))
+        
     except:
         continue
     
@@ -29,7 +31,6 @@ while True:
     try:
         conn.request("POST", "/update", params, headers)
         response = conn.getresponse()
-        print("Temperarture:{}*C Humidity:{}%".format(temperatureCelsius, humidityPercent))
         print(response.status, response.reason)
         conn.close()
     except:
