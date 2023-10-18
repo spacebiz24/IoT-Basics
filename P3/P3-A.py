@@ -31,7 +31,6 @@ while True:
         response = conn.getresponse()
         print("Temperarture:{}*C Humidity:{}%".format(temperatureCelsius, humidityPercent))
         print(response.status, response.reason)
-        data = response.read()
         conn.close()
     except:
         print("Connection Failed")
