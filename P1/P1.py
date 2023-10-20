@@ -18,6 +18,6 @@ try:
     time.sleep(1)
     GPIO.output(LED_PIN, False)
     time.sleep(1)
-except KeyBoardInterrupt:
+except KeyboardInterrupt:
   GPIO.cleanup()
   exit()
