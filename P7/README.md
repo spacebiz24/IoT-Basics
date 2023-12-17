@@ -24,7 +24,7 @@ ___
    ```bash
    sudo apt update && sudo apt upgrade
    sudo apt install mariadb-server-10.0 mariadb-client-10.0
-   sudo apt-get install mysql.connector
+   sudo pip install mysql.connector
    ```
 1. To start the setup process of MariaDB, run the following command `sudo mysql_secure_installation`.
 1. Set the password and say `Y` to all prompts.
