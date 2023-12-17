@@ -19,6 +19,7 @@ try:
 		for LEDIndex in range(len(LED)):
 			GPIO.output(LED[LEDIndex], counter&(1<<LEDIndex) != 0)
 		counter += 1
+		time.sleep(1)
 except KeyboardInterrupt:
 	GPIO.cleanup()
 	exit()
