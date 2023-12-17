@@ -11,5 +11,4 @@ ClientSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_DGRAM)
 ClientSocket.sendto(BytesToSend, serverAddressPort)
 
 serverMessage = ClientSocket.recvfrom(bufferSize)
-messageReceived = "Message From Server: {}".format(serverMessage[0])
-print(messageReceived)
+print(f"Message From Server: {serverMessage[0]}")
