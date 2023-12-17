@@ -1,9 +1,8 @@
-import time
+import RPi.GPIO as GPIO
+import mysql.connector
 from pytz import timezone
 from datetime import datetime
-import csv
-import MySQLdb
-import RPi.GPIO as GPIO
+import time
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -11,7 +10,7 @@ GPIO.setmode(GPIO.BCM)
 IR_SENSOR_PIN = 4
 GPIO.setup(IR_SENSOR_PIN, GPIO.IN)
 
-Database = MySQLdb.connect(host = "localhost", user = "exampleuser", passwd = "pimylifeup", db = "exampledb")
+Database = mysql.connector.connect(host = "localhost", user = "exampleuser", passwd = "pimylifeup", db = "exampledb")
 Cursor = Database.cursor()
 
 while True:
