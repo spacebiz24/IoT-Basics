@@ -13,8 +13,6 @@ print("UDP Server Up and Running")
 while True:
     bytesAddress = ServerSocket.recvfrom(bufferSize)
     (message, address) = bytesAddress
-    clientMessage = "Message From Client: {}".format(message)
-    clientIP = "Client IP Address: {}".format(address)
-    print(clientMessage)
-    print(clientIP)
+    print(f"Message From Client: {message}")
+    print(f"Client IP Address: {address}")
     ServerSocket.sendto(BytesToSend, address)
