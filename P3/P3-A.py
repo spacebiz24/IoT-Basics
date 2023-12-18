@@ -21,6 +21,7 @@ while True:
         temperatureCelsisus = sensor.temperature
         humidityPercent = sensor.humidity
         print("Temperarture:{}*C Humidity:{}%".format(temperatureCelsius, humidityPercent))
+        time.sleep(1)
         
     except:
         continue
