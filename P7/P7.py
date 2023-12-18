@@ -15,8 +15,8 @@ Cursor = Database.cursor()
 
 while True:
     Proximity = GPIO.input(IR_SENSOR_PIN)
-    currentTime = datetime.now(timezone("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S.%f")
     print(Proximity)
+    currentTime = datetime.now(timezone("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S.%f")
     Cursor.execute('''INSERT INTO SensorStats(Time, Proximity) VALUES(%s, %s);''', (currentTime, Proximity))
     Database.commit()
     time.sleep(1)
